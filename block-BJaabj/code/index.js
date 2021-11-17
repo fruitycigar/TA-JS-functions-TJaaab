@@ -71,20 +71,13 @@ function getTable() {
 
   let num = +prompt(`Enter a number.`);
 
-  console.log(`${num} * 1 = ${num * 1}`);
-  console.log(`${num} * 2 = ${num * 2}`);
-  console.log(`${num} * 3 = ${num * 3}`);
-  console.log(`${num} * 4 = ${num * 4}`);
-  console.log(`${num} * 5 = ${num * 5}`);
-  console.log(`${num} * 6 = ${num * 6}`);
-  console.log(`${num} * 7 = ${num * 7}`);
-  console.log(`${num} * 8 = ${num * 8}`);
-  console.log(`${num} * 9 = ${num * 9}`);
-  console.log(`${num} * 10 = ${num * 10}`);
-
+  for (i = 1; i <= 10; i++) {
+    console.log(`${num} * ${i} = ${num * i}`);
+  }
 }
 
 // getTable();
+
 /*
 5. Create a function named `isLeapYear` with the following steps:
 
@@ -93,34 +86,36 @@ function getTable() {
 */
 
 function isLeapYear() {
-
   let year = +prompt(`Enter a year.`);
-
-  if (year % 4 === 0) {
+  if (year % 400 === 0) {
+    alert(`${year} is a leap year.`);
+  } else if (year % 100 === 0) {
+    alert(`${year} is not a leap year.`);
+  } else if (year % 4 === 0) {
     alert(`${year} is a leap year.`);
   } else {
-    alert(`${year} is not a leap year.`)
+    alert(`${year} is not a leap year.`);
   }
 }
 
 // isLeapYear();
+
 /*
+
 6. Create a function named `getFactorial` with the following steps:
 
   - Prompts a message saying `Enter a number` and store the value into variable named`number`
   - Alert `The factorial of [number] is [factorial]`
 
 */
-
 function getFactorial() {
-
   let number = +prompt(`Enter a number.`);
-
-  for (number > 0; number < 1; number--) {
-    let factorial = number * (number--);
+  let final = 1;
+  for (i = number; i >= 1; i--) {
+    final = final * i;
   }
-
-  alert(`The factorial of ${number} is ${factorial}.`)
+  alert(`The factorial of ${number} is ${final}.`)
 }
 
-getFactorial();
+getFactorial()
+
