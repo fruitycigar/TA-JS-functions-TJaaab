@@ -229,39 +229,39 @@ Do the following with above problem.
 - Write a Function Declaration
 function oddOrEven (number) {
   if (number % 2 === 0) {
-    return `Number is odd.`;
-  } else {
     return `Number is even.`;
+  } else {
+    return `Number is odd.`;
   }
 }
 
 // - Write an anonymous Function Expression
 let oddOrEven = function (number) {
   if (number % 2 === 0) {
-    return `Number is odd.`;
-  } else {
     return `Number is even.`;
+  } else {
+    return `Number is odd.`;
   }
 }
 
 // - Write an named Function Expression
 let oddOrEven = function check (number) {
   if (number % 2 === 0) {
-    return `Number is odd.`;
-  } else {
     return `Number is even.`;
+  } else {
+    return `Number is odd.`;
   }
 }
 
 // - Write an Arrow Function without curly brackets (hint: use ternary operator)
-let oddOrEven = (number) => (number % 2 === 0) ? 'Number is odd' : 'Number is even';
+let oddOrEven = (number) => (number % 2 === 0) ? 'Number is even' : 'Number is odd';
 
 // - Write an Arrow Function with curly brackets
 let oddOrEven = (number) => {
   if (number % 2 === 0) {
-    return true;
+    return `Number is even.`;
   } else {
-    return false;
+    return `Number is odd.`;
   }
 }
 
