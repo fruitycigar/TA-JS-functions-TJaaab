@@ -8,20 +8,20 @@
   * [ ] Add an additional argument to the function that takes the conversion rate of human to dog years.
 */
 
-function calculateDogAge() {
-  // Your code goes here
-}
+// function calculateDogAge(dogAge) {
+//   return dogAge * 7;
+// }
 
-/*
-2. 🎖Write a function named calculateMoviesToWatch that:
-  * [ ] takes 2 arguments: age, number of movies you watch every week. (take 4 weeks per month)
-  * [ ] calculates the number of movies for rest of the life (based on a constant max age).
-  * [ ] Return the total number of movie you will watch.
-*/
+// /*
+// 2. 🎖Write a function named calculateMoviesToWatch that:
+//   * [ ] takes 2 arguments: age, number of movies you watch every week. (take 4 weeks per month)
+//   * [ ] calculates the number of movies for rest of the life (based on a constant max age).
+//   * [ ] Return the total number of movie you will watch.
+// */
 
-function calculateMoviesToWatch() {
-  // Your code goes here
-}
+// function calculateMoviesToWatch(age = 1, movies = 1) {
+//   return (70 - age) * (48 * movies);
+// }
 
 /*
 3. 🎖Create a function called celsiusToFahrenheit:
@@ -29,9 +29,10 @@ function calculateMoviesToWatch() {
   * [ ] Convert it to fahrenheit and return "NN°F is NN°C"
 */
 
-function celsiusToFahrenheit() {
-  // Your code goes here
-}
+// function celsiusToFahrenheit(temp = 0) {
+//   fahrenheit = (temp * 1.8) + 32;
+//   return (temp * 1.8) + 32 + "°F is " + temp + "°C.";
+// } figure out why this isn't working
 
 /*
 4. 🎖Create a function called fahrenheitToCelsius:
@@ -39,9 +40,9 @@ function celsiusToFahrenheit() {
   * [ ] Convert it to celsius and return "NN°F is NN°C"
 */
 
-function celsiusToFahrenheit() {
-  // Your code goes here
-}
+// function celsiusToFahrenheit() {
+//   // Your code goes here
+// } same as above, gotta know why it doesn't work
 
 /*
 5. 🎖 Write a function pow(n, x) that returns x in power n.
@@ -51,28 +52,44 @@ function celsiusToFahrenheit() {
   * [ ] If the value of n is below 0 return "The number below 1 is not allowed"
 */
 
-function pow() {
-  // Your code goes here
-}
+// function pow(x, n) {
+// if (n < 0) {
+//   return "The number below one is not allowed.";
+// } else {
+//   return (x ** n);
+// }
+// } // correct!
 
-// Test
-pow(3, 2); // 9
-pow(3, 3); // 27
-pow(1, 100); // 1
-pow(-31, 2); // "The number below 1 is not allowed"
+// // Test
+// pow(3, 2); // 9
+// pow(3, 3); // 27
+// pow(1, 100); // 1
+// pow(-31, 2); // "The number below 1 is not allowed"
 
 /*
 6. 🎖Write a program that accepts two parameter a number n and a string with possible values of `sum` or `product`
 and return sum or product of 1,…,n. If user enters any other value than `sum` or `product` alert `Not a valid Input`.
 */
 
-function sumOrProductOfN() {
-  // Your code goes here
-}
+// function sumOrProductOfN(n, operation) {
+//   if (operation = 'sum') {
+//     let summa = 0 + n;
+//     for (let i = n; i >= 1; i++) {
+//       summa = summa + i;
+//       return summa;
+//     }
+//   } else if (operation = 'product') {
+//     let producta = 1 * n;
+//     for (let i = n; i >= 1; i--) {
+//       producta = producta * i;
+//       return producta;
+//     }
+//   }
+// } // nopes, did not work
 
-sumOrProductOfN(4, 'sum'); // 10
-sumOrProductOfN(4, 'product'); // 24
-sumOrProductOfN(4, 'hello'); // alert "Not a valid Input"
+// sumOrProductOfN(4, 'sum'); // 10
+// sumOrProductOfN(4, 'product'); // 24
+// sumOrProductOfN(4, 'hello'); // alert "Not a valid Input"
 
 /*
 6. 🎖Write a program that accepts a number n using argument and return the sum of the numbers 1 to n
