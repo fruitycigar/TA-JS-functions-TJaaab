@@ -11,10 +11,13 @@ minToSec(2) ➞ 120
 */
 
 // - Write a Function Decleration for above problem
-function minToSec() {
-  // Your code
+function minToSec(m = 1) {
+  let seconds = m * 60;
+  return seconds;
 }
 // - Execute the function with required parameter
+
+minToSec(20);
 
 /* 2. 
 Create a function named isInRange which validates whether a number n is exclusively within the bounds of lower and upper.
@@ -26,10 +29,16 @@ isInRange(1, 10, 19); // false
 */
 
 // - Write a Function Decleration for above problem
-function isInRange() {
-  // Your code
+function isInRange(l, u, n) {
+  if ( n > l && n < u) {
+    return true;
+  } else {
+    return false;
+  }
 }
 // - Execute the function with required parameter
+
+isInRange(34, 109, 78);
 
 /* 2. calculateBMI
 
@@ -49,8 +58,18 @@ Obese: BMI is 30 or more
 
 */
 
-function calculateBMI() {
-  // Your code
+function calculateBMI(w, h) {
+  let BMI = w / (h * h);
+
+  if (BMI < 18.5) {
+    return `Underweight.`;
+  } else if (BMI >= 18.5 && BMI <= 24.9) {
+    return `Normal weight.`;
+  } else if (BMI >= 25 && BMI <= 29.9) {
+    return `Overweight.`;
+  } else if (BMI >= 30) {
+    return `Obese`;
+  }
 }
 
 /* 3. appropiateDrinks
@@ -64,8 +83,16 @@ Create a function that take the age are return the appropiate drink based on the
 
 */
 
-function appropiateDrinks() {
-  // Your code
+function appropiateDrinks(age) {
+  if (age < 14) {
+    return `Drink fruit juice.`;
+  } else if (age < 18) {
+    return `Drink soda.`;
+  } else if (age < 21) {
+    return `Drink fruit-flavored beer.`;
+  } else if (age >= 21) {
+    return `Drink throat-piercing vodka.`;
+  }
 }
 
 /* 4. Add two numers or string
@@ -79,8 +106,16 @@ Twist is when user passes anything other than number, or string value you should
 
 */
 
-function sum() {
-  // Your code
+function sum(input1, input2) {
+  if (typeof(input1) === 'number' && typeof(input2) === 'number') {
+    let sum = input1 + input2;
+    return sum;
+  } else if (typeof(input1) === 'string' && typeof(input2) === 'string') {
+    let concat = `${input1} ${input2}.`;
+    return concat;
+  } else {
+    alert(`Enter valid values.`);
+  }
 }
 
 // Function Test
